@@ -102,7 +102,7 @@ public class MovementAnimation : MonoBehaviour
         if (collision.gameObject.CompareTag("Speed"))
         {
             
-            coinscount++;
+            
             Transform col = collision.transform;
             col.transform.position = new Vector2(999, 999);
         }
@@ -110,7 +110,7 @@ public class MovementAnimation : MonoBehaviour
         if (collision.gameObject.CompareTag("Health"))
         {
             Destroy(collision.gameObject);
-            coinscount++;
+            
         }
 
     }
