@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Knight Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: fc26ba2e7b3c7fd4890885f6f53a4157
   m_configObjects: {}

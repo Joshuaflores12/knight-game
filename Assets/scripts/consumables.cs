@@ -18,7 +18,7 @@ public class consumables : MonoBehaviour
         }
         if (health)
         {
-            player.healthpoints= healthboost;
+            player.healthpoints += healthboost;
         }
     }
 

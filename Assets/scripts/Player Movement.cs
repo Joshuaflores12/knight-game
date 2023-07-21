@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class MovementAnimation : MonoBehaviour
 {
     //Speed (how fast the player will navigate on our game)
@@ -14,6 +14,7 @@ public class MovementAnimation : MonoBehaviour
     public Animator anim;
     public int coinscount;
     public int healthpoints;
+    public TextMeshProUGUI hpVal, coinVal;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,8 +67,12 @@ public class MovementAnimation : MonoBehaviour
         anim.SetFloat("Horizontal",movementInput.x);
         anim.SetFloat("Vertical", movementInput.y);
         anim.SetFloat("Speed", movementInput.sqrMagnitude);
-
-
+       hpVal.text = healthpoints.ToString();
+        coinVal.text = coinscount.ToString();
+        if (healthpoints <= 0) 
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
 
 
     }
